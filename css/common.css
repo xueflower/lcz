@@ -1,0 +1,90 @@
+/*通用样式*/
+* { -webkit-tap-highlight-color: transparent; outline: 0; margin: 0; padding: 0; vertical-align: baseline; }
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin: 0; padding: 0; vertical-align: baseline; }
+img { border: 0 none; vertical-align: top; }
+i, em { font-style: normal; }
+ol, ul { list-style: none;} 
+input, select, button, h1, h2, h3, h4, h5, h6 { font-size: 100%; font-family: inherit; }
+table { border-collapse: collapse; border-spacing: 0; }
+a { text-decoration: none; color: #666; }
+html {font-size: 62.5%;font-family: "PingFang-SC-Regular";}
+body { margin: 0 auto; /*min-width: 320px; max-width: 640px; */height: 100%; font-size: 1rem; font-family: -apple-system,Helvetica,sans-serif; line-height: 1.5; color: #666; -webkit-text-size-adjust: 100% !important; text-size-adjust: 100% !important;}
+input[type="text"], textarea { -webkit-appearance: none; -moz-appearance: none; appearance: none; }
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+ul ,li {
+	list-style: none;
+}
+a {
+text-decoration: none;	
+}
+
+.fl {
+	float:left!important;
+}
+.fr {
+	float: right;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.btn{
+	width: 26.25rem;
+	height: 3.333333rem;
+	border-radius: 1.666666rem;
+	background: #33CDBA;
+	margin: auto;
+	margin-top: 1.5rem;
+}
+.btn p{
+	font-size: 1.333333rem;
+	color: #fff;
+	text-align: center;
+	height: 3.333333rem;
+	line-height: 3.333333rem;
+}
+/*背景颜色*/
+.col-white{
+	color: #fff;
+}
+.col-99{
+	color: #999999;
+}
+.col-33{
+	color: #333;
+}
+.col-red{
+	color: #FF483C;
+}
+.bg-green{
+	background: #33CDBA;
+}
+.bg-grey{
+	background: #F1F9FA;
+}
+.bg-red{
+	background: #FF483C;
+}
+
+/*按钮*/
+.sure-btn{
+	width: 5.833333rem;
+	height: 2.083333rem;
+	margin: auto;
+	margin-top: 0.958333rem;
+	padding-bottom: 0.958333rem;
+}
+.sure-btn p{
+	border-radius: 0.416666rem;
+	text-align: center;
+	line-height: 2.083333rem;
+}
