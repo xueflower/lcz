@@ -157,9 +157,17 @@ body{
 	margin-top: 1rem;
 }
 .apply .choose-school .school-list ul li input{
-	margin-left: 3.25rem;
+	margin-left: 1.041666rem;
 	outline: none;
 	border: none;
+	display: inline-block;
+	height: 2.083333rem;
+	text-align: center;
+	border-radius:0.416666rem;
+	width: 12.708333rem;
+}
+.apply .choose-school .school-list ul li input.price{
+	width: 10rem;
 }
 .bottom-quan>ul>li{
 	overflow: hidden;
@@ -173,18 +181,18 @@ body{
 .bottom-quan>ul>li .left{
 	display: inline-block;
 	width: 10.416666rem;
-	height: 100%;
+	position: absolute;
+	top: 50%;
+	margin-top: -1.25rem;
 }
 .bottom-quan ul li .left .box-l{
 	height: 100%;
 }
 .bottom-quan ul li .left .box-l em{
-	margin-bottom: 2.208333rem;
 	display: inline-block;
 	font-size: 1.666666rem;
 }
 .bottom-quan ul li .left .box-l span{
-	margin-top: 2.791666rem;
 	display: inline-block;
 	height: 2.5rem;
 	line-height: 2.5rem;
@@ -192,18 +200,10 @@ body{
 }
 .bottom-quan ul li.active .left .box-l span{
 	margin-left: 0.958333rem;
-	padding-top: 3.333333rem;
-	margin-top: 0;
 }
 .bottom-quan ul li .left .box-r p{
 	font-size: 0.833333rem;
 	margin-left: 0.375rem;
-}
-.bottom-quan ul li .left .box-r p:first-child{
-	padding-top: 2.916666rem;
-}
-.bottom-quan ul li.active .left .box-r p:first-child{
-	padding-top: 3.458333rem;
 }
 .bottom-quan ul li .left .box-r p:last-child{
 	color: #33CDBA;
@@ -274,12 +274,10 @@ body{
 }
 .apply .modal .modal-cont p{
 	width: 100%;
-	height: 3.333333rem;
 	border-radius: 0.166666rem;
 	line-height: 3.333333rem;
 	text-align: center;
 	font-size: 1.333333rem;
-	font-weight: bold;
 }
 .apply .modal .modal-cont .inner{
 	box-sizing: border-box;
@@ -426,7 +424,7 @@ body{
 	font-size: 0.916666rem;
 }
 .tip{
-	padding-left:1.208333rem ;
+	padding-left:1.208333rem;
 	color: #1A1A1A;
 	margin-top: 0.75rem;
 	padding-bottom: 1.5rem;
