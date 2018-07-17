@@ -153,8 +153,8 @@ body{
 }
 .apply .choose-school .school-list ul li p{
 	color: #FF483C;
-	margin-bottom: 1rem;
-	margin-top: 1rem;
+	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
 }
 .apply .choose-school .school-list ul li input{
 	margin-left: 1.041666rem;
@@ -165,6 +165,7 @@ body{
 	text-align: center;
 	border-radius:0.416666rem;
 	width: 12.708333rem;
+	line-height: 2.083333rem;
 }
 .apply .choose-school .school-list ul li input.price{
 	width: 10rem;
