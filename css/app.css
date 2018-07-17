@@ -2,7 +2,9 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
-
+body{
+	background: #fff;
+}
 /*首页index.html*/
 .index{
 	width: 100%;
