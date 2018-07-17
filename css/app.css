@@ -442,7 +442,7 @@ body{
 	margin-bottom: 0;
 }
 .pay-bottom{
-	height: 5rem;
+	height: 4.958333rem;
 	width: 100%;
 	border-top: 1px solid #F0F0F0;
 }
@@ -470,7 +470,7 @@ body{
 }
 .pay-bottom .payfor{
 	width: 8.333333rem;
-	height: 5rem;
+	height: 100%;
 	background: #FF483C;
 }
 .pay-bottom .payfor p{
