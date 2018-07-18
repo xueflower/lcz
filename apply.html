@@ -129,13 +129,16 @@
 	<script type="text/javascript" src="js/layui.js" ></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript">
+		console.log($('body').css('overflow'))
 		$('.btn').click(function(){
 			$('.modal').show();
 			$('body').css('overflow','hidden');
+			alert(11111111);
 		})
 		$('.modal').click(function(){
 			$(this).hide();
 			$('body').css('overflow','initial');
+			console.log($('body').css('overflow'))
 		})
 		$('.modal-btn a').eq(1).click(function(){
 			$('.modal').hide()
@@ -143,6 +146,7 @@
 		})
 		
 		$('.modal').on('touchstart','.inner p',function(e){
+			console.log($('body').css('overflow'))
 			console.log($(this).offset())
 			event.stopPropagation();
 			var startY = e.originalEvent.changedTouches[0].pageY;
