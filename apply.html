@@ -132,18 +132,21 @@
 		$('.btn').click(function(){
 			$('.modal').show();
 		})
+		$('.modal').click(function(){
+			$(this).hide();
+			$('body').css('overflow','initial');
+		})
 		$('.modal-btn a').eq(1).click(function(){
 			$('.modal').hide()
 			window.location.href='input_msg.html'
 		})
 		
-		$('.inner p').on('touchstart',function(e){
-//			e.preventDefault();
+		$('.modal').on('touchstart','.inner p',function(e){
+			$('body').css('overflow','hidden');
 			var startY = e.originalEvent.changedTouches[0].pageY;
-			$('.inner p').on('touchmove',function(e){
-//				$('.apply').css('overflow','hidden');
+			$('.modal').on('touchmove','.inner p',function(e){
+				e.stopPropagation();
 				var endY= e.originalEvent.changedTouches[0].pageY;
-				e.preventDefault();
 				var H = $(this).offset().top;
 				var L = $(this).offset().left;
 				if(startY<endY){
@@ -161,12 +164,8 @@
 						$(this).offset({top:0,left:L});
 					}
 				}
-//				return false;
-//				$('.inner p').on('touchend',function(e){
-//					$('.apply').css('overflow','initial');
-//				})
+				return false;
 			})
-//			$(".inner p").unbind('touchmove');
 			return false;
 		})
 		
