@@ -126,6 +126,7 @@
 		</div>
 	</body>
 	<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+	<script type="text/javascript" src="js/layui.js" ></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript">
 		$('.btn').click(function(){
@@ -137,29 +138,36 @@
 		})
 		
 		$('.inner p').on('touchstart',function(e){
+//			e.preventDefault();
 			var startY = e.originalEvent.changedTouches[0].pageY;
 			$('.inner p').on('touchmove',function(e){
-				console.log($(this).offset().top)
+//				$('.apply').css('overflow','hidden');
 				var endY= e.originalEvent.changedTouches[0].pageY;
 				e.preventDefault();
 				var H = $(this).offset().top;
 				var L = $(this).offset().left;
 				if(startY<endY){
-					var h = H+4;
+					var h = H+10;
 					if (h<=282) {
 						$(this).offset({top:h,left:L});
 					}else{
 						$(this).offset({top:282,left:L});
 					}
 				}else{
-					var h = H-4;
+					var h = H-10;
 					if(h>=0){
 						$(this).offset({top:h,left:L});
 					}else{
 						$(this).offset({top:0,left:L});
 					}
 				}
+//				return false;
+//				$('.inner p').on('touchend',function(e){
+//					$('.apply').css('overflow','initial');
+//				})
 			})
+//			$(".inner p").unbind('touchmove');
+			return false;
 		})
 		
 	</script>
