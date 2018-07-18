@@ -142,7 +142,7 @@
 		})
 		
 		$('.modal').on('touchstart','.inner p',function(e){
-			$('body').css('overflow','hidden')
+			$('body').css('overflow','hidden');
 			var startY = e.originalEvent.changedTouches[0].pageY;
 			$('.modal').on('touchmove','.inner p',function(e){
 				e.stopPropagation();
