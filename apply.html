@@ -137,35 +137,30 @@
 		})
 		
 		$('.inner p').on('touchstart',function(e){
-			e.preventDefault();
-			var H = $(this).offset().top;
-			var L = $(this).offset().left;
-			var h = H-4;
-			if (h>=0) {
-				$(this).offset({top:h,left:L});
-			}
+			var startY = e.originalEvent.changedTouches[0].pageY;
+			$('.inner p').on('touchmove',function(e){
+				console.log($(this).offset().top)
+				var endY= e.originalEvent.changedTouches[0].pageY;
+				e.preventDefault();
+				var H = $(this).offset().top;
+				var L = $(this).offset().left;
+				if(startY<endY){
+					var h = H+4;
+					if (h<=282) {
+						$(this).offset({top:h,left:L});
+					}else{
+						$(this).offset({top:282,left:L});
+					}
+				}else{
+					var h = H-4;
+					if(h>=0){
+						$(this).offset({top:h,left:L});
+					}else{
+						$(this).offset({top:0,left:L});
+					}
+				}
+			})
 		})
 		
-//	var mybody = document.getElementsByTagName('body')[0];
-// 
-//  //滑动处理
-//  var startX, startY, moveEndX, moveEndY, X, Y;   
-//  mybody.addEventListener('touchstart', function(e) {
-//      e.preventDefault();
-//      startX = e.touches[0].pageX;
-//      startY = e.touches[0].pageY;
-//  });
-//  mybody.addEventListener('touchmove', function(e) {
-//      e.preventDefault();
-//      moveEndX = e.changedTouches[0].pageX;
-//      moveEndY = e.changedTouches[0].pageY;
-//      X = moveEndX - startX;
-//      Y = moveEndY - startY;
-//      if ( X > 0 ) {alert(‘向右’);}
-//      else if ( X < 0 ) {alert(‘向左’);}
-//      else if ( Y > 0) {alert(‘向下’);}
-//      else if ( Y < 0 ) { alert(‘向上’);}
-//      else{alert(‘没滑动’); }
-//  });
 	</script>
 </html>
