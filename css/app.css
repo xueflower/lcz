@@ -124,6 +124,9 @@ body{
 	margin-top: 2.583333rem;
 	padding: 0 1.25rem;
 }
+.apply .choose-school .school-list ul li{
+	padding-top: 0.666666rem;
+}
 .apply .choose-school .school-list ul li span{
 	display: inline-block;
 	height: 2.083333rem;
@@ -131,9 +134,7 @@ body{
 	line-height: 2.083333rem;
 	text-align: center;
 	margin-bottom: 0.541666rem;
-}
-.apply .choose-school .school-list ul li{
-	padding-top: 0.666666rem;
+	font-size: 1.083333rem;
 }
 .apply .choose-school .school-list ul li span:first-child{
 	margin-top: 0;
@@ -150,6 +151,9 @@ body{
 }
 .apply .choose-school .school-list ul li:nth-child(3) span{
 	width: 4.166666rem;
+}
+.apply .choose-school .school-list ul li:nth-child(3) span:first-child{
+	width: 4.333333rem;
 }
 .apply .choose-school .school-list ul li p{
 	color: #FF483C;
