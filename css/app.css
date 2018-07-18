@@ -285,13 +285,13 @@ body{
 	padding: 0.625rem 1.291666rem 0.25rem;
 	height: 26.666666rem;
 	border-bottom: 1px solid #E0E0E0;
+	overflow: hidden;
 }
 .apply .modal .modal-cont .inner p{
 	font-size: 1.166666rem;
 	color: #333;
 	line-height: 1.666666rem;
 	height: 100%;
-	overflow: hidden;
 }
 .apply .botton-btn{
 	width: 100%;
