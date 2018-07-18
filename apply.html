@@ -143,6 +143,7 @@
 		})
 		
 		$('.modal').on('touchstart','.inner p',function(e){
+			console.log($(this).offset())
 			event.stopPropagation();
 			var startY = e.originalEvent.changedTouches[0].pageY;
 			$('.modal').on('touchmove','.inner p',function(e){
@@ -151,15 +152,15 @@
 				var H = $(this).offset().top;
 				var L = $(this).offset().left;
 				if(startY<endY){
-					var h = H+10;
-					if (h<=282) {
+					var h = H+12;
+					if (h<=276) {
 						$(this).offset({top:h,left:L});
 					}else{
-						$(this).offset({top:282,left:L});
+						$(this).offset({top:276,left:L});
 					}
 				}else{
-					var h = H-10;
-					if(h>=0){
+					var h = H-12;
+					if(h>=2){
 						$(this).offset({top:h,left:L});
 					}else{
 						$(this).offset({top:2,left:L});
