@@ -91,3 +91,7 @@ text-decoration: none;
 	text-align: center;
 	line-height: 2.083333rem;
 }
+
+.layui-m-layersection{
+	padding-top: 0;
+}

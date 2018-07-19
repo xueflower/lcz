@@ -279,7 +279,7 @@ body{
 }
 .modal .modal-cont{
 	width: 25rem;
-	height: 33.333333rem;
+	/*height: 33.333333rem;*/
 	margin: auto;
 	margin-top: 11.125rem;
 	background: #fff;
