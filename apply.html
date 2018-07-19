@@ -131,8 +131,14 @@
 	<script type="text/javascript">
 		//弹框想显示与否
 		$('.btn').click(function(){
+			console.log($('body').height())
 			$('.modal').show();
-			$('body').css('overflow','hidden');
+			$('body').css({
+				'overflow':'hidden',
+				'position':'fixed',
+				'height':'100%',
+				'bottom':'0'
+			});
 			return false;
 		})
 		$('.modal').click(function(){
