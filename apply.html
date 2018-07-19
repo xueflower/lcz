@@ -131,7 +131,6 @@
 	<script type="text/javascript">
 		//弹框想显示与否
 		$('.btn').click(function(){
-			console.log($('body').height())
 			$('.modal').show();
 			$('body').css({
 				'overflow':'hidden',
@@ -141,7 +140,10 @@
 		})
 		$('.modal').click(function(){
 			$(this).hide();
-			$('body').css('overflow','initial');
+			$('body').css({
+				'overflow':'initial',
+				'position':'initial'
+			});
 		})
 		$('.modal-btn a').eq(1).click(function(){
 			$('.modal').hide()
@@ -153,6 +155,8 @@
 			e.stopPropagation();
 			var L = $('.inner p').offset().left;
 			var h = $(this).height()-$('.inner').height();
+			console.log(h)
+			console.log($(this).offset().top)
 			var startY = e.originalEvent.changedTouches[0].pageY;
 			$('.modal').on('touchmove','.inner p',function(e){
 				e.stopPropagation();
@@ -161,19 +165,20 @@
 				if(startY<endY){
 					t+=13;
 					//此处的13为该p标签的上margin
-					if (t<(h+13)) {
+					if (t<=(h-102)) {
 						$(this).offset({top:t,left:L});
 					}else{
-						$(this).offset({top:h+13,left:L});
+						$(this).offset({top:h-102,left:L});
 					}
 				}else{
 					t-=13;
-					if(t>0){
+					if(t>(-102)){
 						$(this).offset({top:t,left:L});
 					}else{
-						$(this).offset({top:0,left:L});
+						$(this).offset({top:-102,left:L});
 					}
 				}
+				console.log(t)
 				return false;
 			})
 			return false;
