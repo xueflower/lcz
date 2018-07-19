@@ -45,6 +45,9 @@ text-decoration: none;
 	margin: auto;
 	margin-top: 1.5rem;
 }
+.btn.active{
+	background: #ccc;
+}
 .btn p{
 	font-size: 1.333333rem;
 	color: #fff;

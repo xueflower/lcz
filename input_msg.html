@@ -22,21 +22,63 @@
 						<span class="bg-green col-white fr">获取验证码</span>
 					</li>
 					<li>
-						<input type="" placeholder="请输入验证码"/>
+						<input class="yzcode" type="" placeholder="请输入验证码"/>
 					</li>
 				</ul>
 			</div>
-			<div class="btn">
+			<div class="btn active">
 				<a href="pay_list.html">
 					<p>下一步</p>
 				</a>
 			</div>
 		</div>
 	</body>
+	<script src="js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" src="js/common.js" ></script>
 	<script type="text/javascript">
 //		$('.btn').click(function(){
 //			
 //		})
+
+
+//获取验证码
+	var on = true;
+	$('span').click(function(){
+		if (on) {
+			on = !on;
+			var that = $(this);
+			var time = 60;
+			var newTime;
+			$(this).css('background','#C2C2C2');
+			var timer = setInterval(function(){
+				time--;
+				if (time<10) {
+					newTime = '0' + time;
+				}else{
+					newTime = time;
+				}
+				var str = '获取时间('+newTime+'s)';
+				that.html(str);
+				if (time<=0) {
+					clearInterval(timer);
+					that.css('background','red').html('重新获取');
+					on = !on;
+				}
+			},1000);
+		}
+	})
+	$('.yzcode').blur(function(){
+		$('.btn').removeClass('active');
+	})
+	$('.btn').click(function(){
+		var on = $(this).hasClass('active');
+//		if (!on) {
+//			$.ajax({
+//				type:"get",
+//				url:"",
+//				async:true
+//			});
+//		}
+	})
 	</script>
 </html>

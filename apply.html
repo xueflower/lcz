@@ -16,20 +16,20 @@
 					<ul>
 						<li>
 							<span>驾校名称</span>
-							<span class="bg-green col-white">巨星驾校</span>
-							<span class="bg-grey col-99">巨星驾校南岸分校</span>
+							<span class="normal">巨星驾校</span>
+							<span class="normal">巨星驾校南岸分校</span>
 						</li>
 						<li>
-							<span>驾校名称</span>
-							<span class="bg-green col-white">巨星驾校</span>
-							<span class="bg-grey col-99">巨星驾校南岸分校</span>
-							<span class="bg-grey col-99">巨星驾校</span>
-							<span class="bg-grey col-99">巨星驾校南岸分校</span>
+							<span>学车地点</span>
+							<span class="normal">南岸区</span>
+							<span class="normal">南岸区</span>
+							<span class="normal">南岸区</span>
+							<span class="normal">南岸区</span>
 						</li>
 						<li>
 							<span>学车类型</span>
-							<span class="bg-green col-white">C1</span>
-							<span class="bg-grey col-99">C2</span>
+							<span class="normal">C1</span>
+							<span class="normal">C2</span>
 						</li>
 						<li>
 							<span>学车费用</span>
@@ -89,8 +89,8 @@
 							<div class="info-list">
 								<ul>
 									<li>有效期:2017-12-14 10:49:11</li>
-									<li>有效期:2017-12-14 10:49:11</li>
-									<li>有效期:2017-12-14 10:49:11</li>
+									<li>详细地址:重庆市渝中区中山三路1121号</li>
+									<li>联系方式:18680734775</li>
 								</ul>
 								<p class="col-red">点击后立即领取</p>
 							</div>
@@ -129,9 +129,11 @@
 	<script type="text/javascript" src="js/layui.js" ></script>
 	<script type="text/javascript" src="js/common.js"></script>
 	<script type="text/javascript">
+		//弹框想显示与否
 		$('.btn').click(function(){
 			$('.modal').show();
 			$('body').css('overflow','hidden');
+			return false;
 		})
 		$('.modal').click(function(){
 			$(this).hide();
@@ -142,28 +144,30 @@
 			window.location.href='input_msg.html';
 		})
 		
+		//弹窗的文字区域的滑动效果
 		$('.modal').on('touchstart','.inner p',function(e){
-			console.log($(this).offset())
 			e.stopPropagation();
+			var L = $('.inner p').offset().left;
+			var h = $(this).height()-$('.inner').height();
 			var startY = e.originalEvent.changedTouches[0].pageY;
 			$('.modal').on('touchmove','.inner p',function(e){
 				e.stopPropagation();
 				var endY= e.originalEvent.changedTouches[0].pageY;
-				var H = $(this).offset().top;
-				var L = $(this).offset().left;
+				var t = $(this).offset().top;
 				if(startY<endY){
-					var h = H+12;
-					if (h<=276) {
-						$(this).offset({top:h,left:L});
+					t+=13;
+					//此处的13为该p标签的上margin
+					if (t<(h+13)) {
+						$(this).offset({top:t,left:L});
 					}else{
-						$(this).offset({top:276,left:L});
+						$(this).offset({top:h+13,left:L});
 					}
 				}else{
-					var h = H-12;
-					if(h>=2){
-						$(this).offset({top:h,left:L});
+					t-=13;
+					if(t>0){
+						$(this).offset({top:t,left:L});
 					}else{
-						$(this).offset({top:2,left:L});
+						$(this).offset({top:0,left:L});
 					}
 				}
 				return false;
@@ -171,5 +175,11 @@
 			return false;
 		})
 		
+//		点击切换选择驾校以及区域等激活状态
+		$('.school-list ul li span.normal').click(function(){
+			$(this).siblings('span').removeClass('active');
+			$(this).removeClass('mormal').addClass('active');
+			$(this).parent().next().children('span').removeClass('active');
+		})
 	</script>
 </html>
