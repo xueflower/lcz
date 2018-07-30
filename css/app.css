@@ -239,18 +239,16 @@ body{
 	line-height: 1.666666rem;
 	color: #333333;
 	font-size: 1.083333rem;
-}
-.bottom-quan>ul>li .right .top-condition span:last-child{
-	height: 1.25rem;
-	line-height: 1.25rem;
-	font-size: 1.25rem;
+	margin-top: 0.666666rem;
+	text-align: center;
 	vertical-align: middle;
 }
+.bottom-quan>ul>li .right .top-condition span:last-child{
+	font-size: 1.25rem;
+}
 .bottom-quan>ul>li .right .top-condition span:first-child{
-	margin-top: 0.666666rem;
 	width: 5rem;
 	color: #fff;
-	text-align: center;
 	margin-right: 0.5rem;
 }
 .bottom-quan>ul>li .right .info-list li{
