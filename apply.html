@@ -149,39 +149,39 @@
 			window.location.href='input_msg.html';
 		})
 		
-		//弹窗的文字区域的滑动效果
-		$('.modal').on('touchstart','.inner p',function(e){
-			e.stopPropagation();
-			var L = $('.inner p').offset().left;
-			var h = $(this).height()-$('.inner').height();
-			console.log(h)
-			console.log($(this).offset().top)
-			var startY = e.originalEvent.changedTouches[0].pageY;
-			$('.modal').on('touchmove','.inner p',function(e){
-				e.stopPropagation();
-				var endY= e.originalEvent.changedTouches[0].pageY;
-				var t = $(this).offset().top;
-				if(startY<endY){
-					t+=13;
-					//此处的13为该p标签的上margin
-					if (t<=(h-90)) {
-						$(this).offset({top:t,left:L});
-					}else{
-						$(this).offset({top:h-90,left:L});
-					}
-				}else{
-					t-=13;
-					if(t>(-116)){
-						$(this).offset({top:t,left:L});
-					}else{
-						$(this).offset({top:-116,left:L});
-					}
-				}
-				console.log(t)
-				return false;
-			})
-			return false;
-		})
+//		//弹窗的文字区域的滑动效果
+//		$('.modal').on('touchstart','.inner p',function(e){
+//			e.stopPropagation();
+//			var L = $('.inner p').offset().left;
+//			var h = $(this).height()-$('.inner').height();
+//			console.log(h)
+//			console.log($(this).offset().top)
+//			var startY = e.originalEvent.changedTouches[0].pageY;
+//			$('.modal').on('touchmove','.inner p',function(e){
+//				e.stopPropagation();
+//				var endY= e.originalEvent.changedTouches[0].pageY;
+//				var t = $(this).offset().top;
+//				if(startY<endY){
+//					t+=13;
+//					//此处的13为该p标签的上margin
+//					if (t<=(h-90)) {
+//						$(this).offset({top:t,left:L});
+//					}else{
+//						$(this).offset({top:h-90,left:L});
+//					}
+//				}else{
+//					t-=13;
+//					if(t>(-116)){
+//						$(this).offset({top:t,left:L});
+//					}else{
+//						$(this).offset({top:-116,left:L});
+//					}
+//				}
+//				console.log(t)
+//				return false;
+//			})
+//			return false;
+//		})
 		
 //		点击切换选择驾校以及区域等激活状态
 		$('.school-list ul li span.normal').click(function(){

@@ -298,7 +298,8 @@ body{
 	padding: 0.375rem 1.291666rem 0.25rem;
 	height: 25.833333rem;
 	border-bottom: 1px solid #E0E0E0;
-	overflow: hidden;
+	/*overflow: hidden;*/
+	overflow: auto;
 }
 .modal .modal-cont .inner p{
 	font-size: 1.166666rem;
