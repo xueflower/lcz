@@ -499,7 +499,10 @@ body{
 .pay-bottom .payfor p:first-child{
 	margin-top: 1.166666rem;
 }
-
+.pay-bottom .payfor .react{
+	font-size: 0.916666rem;
+	line-height: 0.916666rem;
+}
 
 /*订单详情pay_detail.html*/
 .pay_detail .bottom-quan ul li{
