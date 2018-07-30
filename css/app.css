@@ -456,16 +456,20 @@ body{
 	margin-bottom: 0;
 }
 .pay-bottom{
-	height: 4.958333rem;
+	height: 5rem;
 	width: 100%;
+	box-sizing: border-box;
+}
+.pay-bottom .lex{
 	border-top: 1px solid #F0F0F0;
+	width: 22.916666rem;
 }
 .pay-bottom em{
 	color: #000;
 	font-size: 1.166666rem;
 	line-height: 5rem;
 }
-.pay-bottom  span{
+.pay-bottom span{
 	color: #FF483C;
 	font-size: 0.916666rem;
 	margin-left: 0.2rem;
