@@ -503,7 +503,7 @@ body{
 	position: relative;
 }
 .pay_detail .bottom-quan ul li:first-child{
-	margin-top: 0.833333rem;
+	/*margin-top: 0.833333rem;*/
 }
 .pay_detail .bottom-quan ul li .jiao{
 	position: absolute;
