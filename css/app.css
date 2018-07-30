@@ -231,17 +231,20 @@ body{
 	padding-left: 0.791666rem;
 }
 .bottom-quan ul li .right .top-condition{
-	margin-bottom: 0.583333rem;
+	height: 2.916666rem;
 }
 .bottom-quan ul li .right .top-condition span{
 	display: inline-block;
 	height: 1.666666rem;
 	line-height: 1.666666rem;
 	color: #333333;
-	font-size: 1.25rem;
+	font-size: 1.083333rem;
 }
 .bottom-quan>ul>li .right .top-condition span:last-child{
-	margin-top: 0.875rem;
+	height: 1.25rem;
+	line-height: 1.25rem;
+	font-size: 1.25rem;
+	vertical-align: middle;
 }
 .bottom-quan>ul>li .right .top-condition span:first-child{
 	margin-top: 0.666666rem;
